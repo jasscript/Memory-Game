@@ -1,0 +1,647 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*----- Fonts einbindung -----*/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto|Roboto+Slab');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+    font-size: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+h1, h2 {
+    font-family: 'Maiandra Gd ', serif;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+                    /*----- Styling Kopfberreich -----
+                    ----------------------------------*/
+.header-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    flex: 1 0 50%;
+    text-align: center;
+    order: 1;
+}
+
+.heading h1 {
+    margin: 15px 0 5px;
+    font-size: 2.5rem;
+}
+
+.heading p {
+    margin: 0 0 15px;
+    font-size: 1rem;
+}
+
+.navigation {
+    flex: 1 0 15%;
+    order: 0;
+}
+
+                    /*----- Styling Navigation -----
+                    --------------------------------*/
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+#navi li {
+    -webkit-box-shadow: 0 5px 5px rgba(245, 245, 245, 0.75) inset;
+    box-shadow: 0 5px 5px rgba(245, 245, 245, 0.75) inset;
+  }
+.menu_ueber {
+    font-size: 1.2em;
+}
+
+#navi {
+    padding: 1px;
+}
+
+#navi li {
+	list-style: none;
+    background-color: #2e3d49;
+}
+
+#navi a{
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    padding: 1.5em 15% 0.75em;
+    color: #fff;  
+}
+
+#navi  a:hover{
+    color:#CE6634;
+}
+
+                    /*----- Hamburger Buttons normalerweise ausblenden -----*/
+
+.toggle_menu {
+    display: none;
+}
+
+                    /*----- Styling Play Button -----
+                    --------------------------------*/
+.player-choose button {
+        border-radius: 5px;
+        background-color: #b3d4fc;
+    }
+    
+                    /*----- Styling Hauptcontainer -----
+                    -----------------------------------*/
+.main-section {
+    width: 100%;
+}
+
+                    /*----- Neustart Button -----
+                    ----------------------------*/
+.restart {
+    display: flex;
+    justify-content: center;
+}
+i.fa-repeat {
+    font-size: 1.5em;
+}
+
+                    /*----- Styling Spieler Berreich -----
+                    --------------------------------------*/
+.player-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    max-width: 990px;
+    margin: auto;
+}
+
+                    /*----- Styling Züge -----
+                    ------------------------*/
+.move-style {
+    min-height: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+                   /*----- Styling punkte -----
+                    -------------------------*/
+
+.score-panel {
+    text-align: left;
+    margin-bottom: 10px;
+    min-width: 30%;
+    text-align: center;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .stars li i {
+    color: rgb(255, 215, 0);
+    font-size: 180%;
+}
+
+.score-panel .stars li i.stars-start {
+    visibility: visible;
+}
+
+.stars-down-half {
+    font-size: 280%;
+    opacity: 0.5;
+}
+
+.stars-down {
+    visibility: collapse;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+
+                    /*----- Styling der Deckkarten -----
+                     ----------------------------------*/
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: all .6s ease; 
+}
+
+
+.deck .card.open {
+    background: #02b3e4;
+    cursor: default;
+    animation: card 0.5s linear;
+}
+
+@keyframes card{
+    from{  transform: rotateY(180deg)   }
+    to  {  transform: rotateY(360deg) }
+    
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    transform:scale(1.1);
+    animation: card1 1s linear;  
+}
+@keyframes card1{
+    from{  transform: rotateY(0deg)   }
+    to  {  transform: rotateY(360deg) }
+}
+.deck .card.no-event {
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+                    /*----- Styling der Tabelle für Ergebnis -----
+                    ---------------------------------------------*/
+
+.add_cat_table {
+  width: 100%;
+}
+
+                  /*----- Styling Sozial Media footerbereich -----
+                    ------------------------------------------------*/
+
+.screen_reader_text {
+    clip: rect(px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.social_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.social_menu ul li {
+    list-style: none;
+    padding: 0 0.2rem;
+}
+
+.social_menu a{
+    text-decoration: none;
+    color: #02ccba;
+}
+
+.menu a{
+    font-size: 25px;
+    padding: 18px;
+}
+
+/*------ sozial Media Icons -----*/
+
+.social_menu li a:before {
+    font-family: "fontawesome";
+    -webkit-font-smoothing: antialiased;
+    content: '\fe08e'
+}
+
+.social_menu li a[href*="linkedin.com"]::before {
+    content: '\f0e1';
+}
+
+.social_menu li a[href*="github.com"]::before {
+    content: '\f09b';
+}
+
+.social_menu li a[href*="mailto"]::before {
+    content: '\f0e0';
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 479px) {
+    
+  
+    .js .toggle_menu {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #645360;
+        width: 2.5em;
+        height: 2.5em;
+        margin: 10px auto;
+        text-align: center;
+        line-height: 2.5em;
+        border: 1px solid #010101;
+        font-weight: normal;
+        
+      }
+
+    .js  #navi ul {
+        display: none;
+      }
+
+    #navi ul.toggled_on {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 50%;
+      }
+
+    #navi ul.toggled_on li,  .no-js  #navi  li { 
+        display: block;
+      }
+    
+    [data-hamburger]:before { 
+        content: attr(data-hamburger); 
+        speak: none; 
+        display: inline-block;
+        font-size: 200%;
+      }
+    
+    .screen_reader_text { 
+        position: absolute; 
+        top: -9999px; 
+        left: -9999px; 
+      }
+                        /*----- Spielfeld -----
+                        ----------------------*/
+    .deck {
+        width: 360px;
+        min-height: 380px;
+        margin: 0 auto 3em;
+    }
+    
+    .deck .card {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    
+    body {
+        font-size: 100%;
+    }
+    
+                        /*----- Kopfberreich Styling -----*/
+    .header-section {
+        flex-wrap: wrap;
+    }
+    
+    .player-choose {
+        flex: 1 0 0%;
+    }
+    
+    .player-choose button {
+        margin: 0 5px;
+        padding: 0 30px;
+    }
+    
+                    /*----- Navigatinbereich -----*/
+                    /*----- Button zum Anzeigen des Menü -----*/
+    .navigation {
+        flex: 1 0 100%;
+    }
+ 
+    .navigation ul {
+        display: flex;
+        flex: 1 0 0%;
+    }
+     .navigation li {
+        flex: 1 0 0%;
+    }
+                    
+                        /*----- Spielerauswahl Styling-----*/
+    .player-choose {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .player-choose p {
+        margin-right: 5px;
+    }
+    
+                        /*----- Spielfeld -----
+                        ----------------------*/
+    .deck {
+        width: 460px;
+        min-height: 480px;
+        margin: 0 auto 3em;
+    }
+    
+    .deck .card {
+        width: 90px;
+        height: 90px;
+    }
+    
+}
+
+@media only screen and (min-width: 660px) {
+    body {
+        font-size: 120%;
+    }
+                        /*----- Spielfeld -----
+                        ----------------------*/
+    .deck {
+        width: 660px;
+        min-height: 680px;
+        margin: 0 auto 3em;
+    }
+    
+    .deck .card {
+        width: 125px;
+        height: 125px;
+    }
+    
+}
